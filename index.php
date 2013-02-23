@@ -24,7 +24,8 @@ require_once("evlogin.php");
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>LiveNote</title>
+	<title>TuneDo</title>
+<!--<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1; user-scalable=0;" />--!>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 	<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
 	<script src="js/jquery.flipCounter.1.2.js" type="text/javascript"></script>
@@ -65,12 +66,8 @@ require_once("evlogin.php");
 		<button class="btn success" id="start">Start</button>
 		<button class="btn info" id="pause">Pause</button>
 		<button class="btn danger" id="stop">Stop</button>
-		<button class ="btn danger" id="youtube">YouTube</button>
 		<br />
 		<br />
-		<div id="counter-hrs"><input type="hidden" name="counter-hrs-value" value="0" /></div>
-		<div id="counter-mins"><input type="hidden" name="counter-mins-value" value="0" /></div>
-		<div id="counter-secs"><input type="hidden" name="counter-secs-value" value="0" /></div>
 	</div>
 
 <section id="responsive">
@@ -93,35 +90,7 @@ require_once("evlogin.php");
 	</div>
 
 	
-	<div style="text-align:center" id="youtubetools"> 
-		<br/>
-		<br/>
-		<br/>
-		<div id="youtubevideo">
-		<div id="videoDiv">Loading...</div>
-		<br/>
-		<div id="videoInfo">
-        
-        <br/>
-        <p>Current Time: <span id="videoCurrentTime">--:--</span> | Duration: <span id="videoDuration">--:--</span></p>
-        <br/>
-        <p>Bytes Total: <span id="bytesTotal">--</span> | Start Bytes: <span id="startBytes">--</span> | Bytes Loaded: <span id="bytesLoaded">--</span></p>
-        <br/>
-        <p>Controls: <a href="javascript:void(0);" onclick="playVideo();">Play</a> | <a href="javascript:void(0);" onclick="pauseVideo();">Pause</a> | <a href="javascript:void(0);" onclick="muteVideo();">Mute</a> | <a href="javascript:void(0);" onclick="unMuteVideo();">Unmute</a></p>
-        <br/>
-        <p><input id="volumeSetting" type="text" size="3" />&nbsp;<a href="javascript:void(0)" onclick="setVideoVolume();">&lt;- Set Volume</a> | Volume: <span id="volume">--</span></p>
-        <br/>
-        </div>
-        <br/>
-        <button class ="btn danger" id="add-url">Add This YouTube Video's URL To The Document</button>
-        <br/>
-        <br/>
-        <section id="paste-url" contenteditable="true">
-			Paste a Youtube URL here to view the video
-		</section>
-		<br/>
-        <button class ="btn danger" id="load-url">Load This Youtube Video</button>
-      </div> 
+	      </div> 
 	</div> 
 
 </div>
@@ -439,7 +408,7 @@ console.log(input);
 
 
 <footer>
-	<p>Designed and Constructed by Sam Daniel and Ben Leiken</p>
+	<p>Designed and Constructed by Ben Leiken, Sean Harrington, Josh Fishbein, and Krzysztof Danielewicz</p>
 </footer>
 
 </body>
