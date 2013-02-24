@@ -43,17 +43,8 @@ require_once("evlogin.php");
 
 
 <div class="app-form">
-	<img id="evlogo" src="img/evlogo.jpg" />
         <? if (!(isset($_SESSION['isset'])) && !$_SESSION['isset']){ ?>
-	<form action="" method="post">
-	<font color="#93CA6B">Username: </font> <input type = "text" name="username" style="width:145px">
-	<br />
-	<br />
-	<font color="#93CA6B">Password: </font> <input type ="password" name="password" style="width:150px"/>
-	<br />
-	<br />
-	<input  type="submit" value="Login" />
-	</form>
+	<a href=""> <img id="evlogo" src="img/evlogo.png" /></a>
 </div>
 <? } else{ ?>
         <div id="login">

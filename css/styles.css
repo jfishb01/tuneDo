@@ -220,10 +220,6 @@ margin:0;
 
 #evlogo {
 	position:relative;
-border: 1px solid #222222;
--webkit-border-radius: 10px;
-	-moz-border-radius: 10px;
-	border-radius: 10px;
 }
 .app-form {
 border: 2px solid #666666;
@@ -236,10 +232,9 @@ border: 2px solid #666666;
   
 	  font-family: "UbuntuMedium";
 	  
-	  width:170px;
+	  width:120px;
 	  padding:10px;
-	  
-	background-image: url('../img/brushed.jpg');
+background-color: #FFFFFF;	  
 }
 
 #textspace{
