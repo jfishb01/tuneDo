@@ -56,25 +56,41 @@
 	<script src='sprintf.js'></script>
 	<script src='addchecks.js'></script>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-<script type="text/javascript">
-        $(document).ready(function() {
-            $('#newitem').keyup(function(event) {
-		if(event.keyCode == 13){
+	<script type="text/javascript">
+		cbArray = new Array();
+		
+        	$(document).ready(function() {
+            	$('#newitem').keyup(function(event) {
+			if(event.keyCode == 13){
+
+var isChecked = $('#cb').attr('checked')?true:false;
+	console.log(isChecked);
+
 
 
 var container = $('#input1');
    var inputs = container.find('input');
    var id = inputs.length+1;
    	var name =$('#newitem').val();
-   var html = '<input type="checkbox" id="cb'+id+'" value="'+name+'" /> <span>'+name+'</span> <br />';
+   var html = '<input type="checkbox" id="cb" name="'+name+'" /> <span>'+name+'</span> <br />';
    container.after($(html));
 	$('#newitem').val('');	
- 
+ 	cbArray.push($(html));
             }});
  
         });
-    </script>
-	 
+
+
+
+function getUnchecked() {
+  var values = $('#input1:checkbox:not(:checked)').map(function() {
+    return this.value
+    return this.name
+  }).get();
+  // do something with values array
+};
+window.setInterval("getUnchecked()",300);
+</script>
 </head>
 <body>
 	
@@ -144,11 +160,11 @@ var container = $('#input1');
 
 	<input type="form" id="newitem" name="msg" size="70" onchange="add()"/>
 
-	<form id="app">
-    <div id="input1" style="margin-bottom:4px;" class="clonedInput">
-    </div>
+	<div id="app">
+    <fieldset id="input1" style="margin-bottom:4px;" class="clonedInput">
+    </fieldset>
  
-</form>
+</div>
 	<br />
 	<br />
 	<input id="save" type="button" name="Save to Evernote" value="Save to Evernote" /> 
