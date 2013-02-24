@@ -105,7 +105,17 @@ section {
   display: block;
 }
 body {
+  background-color: #000000;
   line-height: 1;
+
+}
+
+#sidebar{
+    float: right;
+    height: 100%;
+    width: 180px;
+    margin-top: 0px;
+    
 
 }
 
@@ -151,18 +161,30 @@ h3 {
 	display:inline-block;
 
 }
-#evlogo {
-	position:relative;
-	left: 90px;
-	top: -20px;
+
+
+#headlogo{
+float:left;
+display:block;
+   margin-left:400px;
+   margin-right: auto;
+text-align: center;
+
+
 }
-#submit {
-	position: relative;
-	left: 180px;
+
+#logo  {
+   display:block;
+   margin-left:auto;
+   margin-right: auto;
+
 }
+
 #save {
-	position:relative;
-	left: 610px;
+  display:block;
+   margin-left:auto;
+   margin-right: auto;
+
 }
 ul {
   display: inline-block;
@@ -171,21 +193,7 @@ li {
   display: inline-block;
   margin-left: 10px;
 }
-header {
-  padding-left: 50px;
-  padding-right: 50px;
-  margin: 0 auto;
-  padding-top:10px;
-  padding-bottom:230px;
 
-}
-header div {
-  position: relative;
-  left: -0px;
-  width: 800px;
-  margin: 0 auto;
-
-}
 #app-wrapper {
   margin: 0 auto;
   padding-left: 50px;
@@ -202,25 +210,52 @@ header div {
   width: 50%;
   margin-bottom: 20px;
 }
-#header {
-  float: left;
+.header {
+display:block;
+margin-left:auto;
+margin:0;
+    margin-right:auto;
 }
-#app-form {
-  float:right;
-  position:relative;
-  top: 10px;
-   left: 90px;
-  width: 22%;
+
+
+#evlogo {
+	position:relative;
+border: 1px solid #222222;
+-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+.app-form {
+border: 2px solid #666666;
+	  -webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	float: right;
+     
+    margin-right: 10px; 
+  
+	  font-family: "UbuntuMedium";
+	  
+	  width:170px;
+	  padding:10px;
+	  
+	background-image: url('../img/brushed.jpg');
+}
+
+#textspace{
+
+background-color: #FFFFFF;
 }
 #login {
-  float: right;
-  position:relative;
-  left: 570px;
-  top: -20px;
+ display: block;
+    margin-left: auto;
+    margin-right: auto;     
 }
-#title {
-  position:relative;
-  left: 570px;
+#title { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+   
 
 }
 #app-footer {
@@ -254,26 +289,13 @@ header div {
 	  -webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
+	background-color: #FFFFFF;
 }
 
 #app p {
 	margin-bottom:5px;
 }
 
-#counter-hrs{
-	display:inline;
-}
-#counter-mins{
-	display:inline;
-}
-#counter-secs{
-	display:inline;
-}
-
-.timestamp {
-	color:#474747;
-	font-family: "ArvoBoldItalic";
-}
 #article {
   margin-bottom: 20px;
   font-family: "UbuntuMedium";
@@ -292,9 +314,9 @@ header div {
 button .butn {
   font-family: "Helvetica Neue";
 }
-footer {
+#footer {
   clear: both;
-  color: #222222;
+  color: #FFFFFF;
   margin: 0 auto;
   padding-left: 30px;
   padding-right: 30px;

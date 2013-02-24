@@ -35,11 +35,14 @@ require_once("evlogin.php");
 </head>
 <body>
 	
-<header>
-	<div id="header">
-		<img id="canister" src="img/logo.jpg" alt="Film Canister" />
-	</div>
-<div id="app-form">
+<div id="wrap">
+	
+	
+		<img id="headlogo" src="img/logo.png" alt="tuneDo Logo" />
+	
+
+
+<div class="app-form">
 	<img id="evlogo" src="img/evlogo.jpg" />
         <? if (!(isset($_SESSION['isset'])) && !$_SESSION['isset']){ ?>
 	<form action="" method="post">
@@ -49,7 +52,7 @@ require_once("evlogin.php");
 	<font color="#93CA6B">Password: </font> <input type ="password" name="password" style="width:150px"/>
 	<br />
 	<br />
-	<input id="submit" type="submit" value="Login" />
+	<input  type="submit" value="Login" />
 	</form>
 </div>
 <? } else{ ?>
@@ -59,7 +62,20 @@ require_once("evlogin.php");
 
         </div>
 <? } ?>
-</header>
+</div>
+
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
 
 <div id="total-app">
 	<div id="app-header">
@@ -72,7 +88,7 @@ require_once("evlogin.php");
 
 <section id="responsive">
 	<p>Screen size below 960px!</p>
-</section>	
+</section>
 	<!--<form action="" method="post">-->
 	<input type="text" name="title" id="title" placeholder="Title" />
 	<br />
@@ -407,11 +423,17 @@ console.log(input);
 </script>
 
 
-<footer>
+
+<br />
+<br />
+<br ?>
+<div id="footer">
 	<p>Designed and Constructed by Ben Leiken, Sean Harrington, Josh Fishbein, and Krzysztof Danielewicz</p>
-</footer>
+</div>
 
 </body>
+
+
 </html>
 
 		
