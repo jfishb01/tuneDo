@@ -54,7 +54,11 @@
 	<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
 	<script src="js/jquery.flipCounter.1.2.js" type="text/javascript"></script>
 	<script src='sprintf.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script src="js/token.js"></script>
+    <script src="js/hello.js"></script>
 	<script src='addchecks.js'></script>
+
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 	<script type="text/javascript">
 		cbArray = new Array();
@@ -142,9 +146,19 @@ window.setInterval("getUnchecked()",300);
 
 <div id="total-app">
 	<div id="app-header">
-		<button class="btn success" id="start">Start</button>
-		<button class="btn info" id="pause">Pause</button>
-		<button class="btn danger" id="stop">Stop</button>
+		<input id="play_key" value="a997982"><button id="play" class="btn success" id="start">Start</button>
+		<button id="pause" class="btn info" id="pause">Pause</button>
+		<button id="stop" class="btn danger" id="stop">Stop</button>
+		
+<div id="apiswf"></div>
+<dl>
+  <dt>track</dt>
+  <dd id="track"></dd>
+  <dt>album</dt>
+  <dd id="album"></dd>
+  <dt>artist</dt>
+  <dd id="artist"></dd>
+</dl>		
 		<br />
 		<br />
 	</div>

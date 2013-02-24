@@ -120,8 +120,8 @@ function Login()
 
     $username = trim($_POST['username']);
     $password = trim($_POST['password']);
-    $consumerKey = "bleiken-4421";
-    $consumerSecret = "6a143060486eaca8";
+    $consumerKey = "userkrys";
+    $consumerSecret = "7cba94d6bd02056f";
 
     $evernoteHost = "sandbox.evernote.com";
     $evernotePort = "443";
