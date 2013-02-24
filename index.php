@@ -54,7 +54,26 @@
 	<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
 	<script src="js/jquery.flipCounter.1.2.js" type="text/javascript"></script>
 	<script src='sprintf.js'></script>
+	<script src='addchecks.js'></script>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+<script type="text/javascript">
+        $(document).ready(function() {
+            $('#newitem').keyup(function(event) {
+		if(event.keyCode == 13){
+
+
+var container = $('#input1');
+   var inputs = container.find('input');
+   var id = inputs.length+1;
+   	var name =$('#newitem').val();
+   var html = '<input type="checkbox" id="cb'+id+'" value="'+name+'" /> <span>'+name+'</span> <br />';
+   container.after($(html));
+	$('#newitem').val('');	
+ 
+            }});
+ 
+        });
+    </script>
 	 
 </head>
 <body>
@@ -114,6 +133,7 @@
 		<br />
 	</div>
 
+
 <section id="responsive">
 	<p>Screen size below 960px!</p>
 </section>
@@ -121,9 +141,14 @@
 	<input type="text" name="title" id="title" placeholder="Title" />
 	<br />
 	<br />
-	<section id="app" name="input" contenteditable="true">
-		<p>Start typing here!</p>
-	</section>
+
+	<input type="form" id="newitem" name="msg" size="70" onchange="add()"/>
+
+	<form id="app">
+    <div id="input1" style="margin-bottom:4px;" class="clonedInput">
+    </div>
+ 
+</form>
 	<br />
 	<br />
 	<input id="save" type="button" name="Save to Evernote" value="Save to Evernote" /> 
