@@ -54,13 +54,11 @@
 	<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
 	<script src="js/jquery.flipCounter.1.2.js" type="text/javascript"></script>
 	<script src='sprintf.js'></script>
-<<<<<<< HEAD
-  <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-  <script src="js/token.js"></script>
-  <script src="js/hello.js"></script>
-=======
+    <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+    <script src="js/token.js"></script>
+    <script src="js/hello.js"></script>
 	<script src='addchecks.js'></script>
->>>>>>> 3f6a04d88742c127287d8e38dba0dcd688a439cd
+
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 <script type="text/javascript">
         $(document).ready(function() {
