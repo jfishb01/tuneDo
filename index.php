@@ -1,24 +1,48 @@
-<?php session_start();
-require_once("lib/autoload.php");
-require_once("lib/Thrift.php");
-require_once("lib/transport/TTransport.php");
-require_once("lib/transport/THttpClient.php");
-require_once("lib/protocol/TProtocol.php");
-require_once("lib/protocol/TBinaryProtocol.php");
-require_once("lib/packages/Errors/Errors_types.php");
-require_once("lib/packages/Types/Types_types.php");
-require_once("lib/packages/UserStore/UserStore.php");
-require_once("lib/packages/UserStore/UserStore_constants.php");
-require_once("lib/packages/NoteStore/NoteStore.php");
-require_once("lib/packages/Limits/Limits_constants.php");
-require_once("evlogin.php");
-    if(!empty($_POST['username']) && !empty($_POST['password']))
-    {
-       $_SESSION['user1'] = trim($_POST['username']);
-       $_SESSION['pass1'] = trim($_POST['password']);
-        Login();
-       $_SESSION['isset']= true;
+<?php
+
+  /*
+   * Copyright 2010-2012 Evernote Corporation.
+   *
+   * This sample web application demonstrates the process of using OAuth to authenticate to
+   * the Evernote web service. More information can be found in the Evernote API Overview
+   * at http://dev.evernote.com/documentation/cloud/.
+   *
+   * This application uses the PHP OAuth Extension to implement an OAuth client.
+   * To use the application, you must install the PHP OAuth Extension as described
+   * in the extension's documentation: http://www.php.net/manual/en/book.oauth.php
+   */
+
+  // Include our configuration settings
+  require_once('config.php');
+  
+  // Include our OAuth functions
+  require_once('functions.php');
+  
+  // Use a session to keep track of temporary credentials, etc
+  session_start();
+  
+  // Status variables
+  $lastError = null;
+  $currentStatus = null;
+  
+  // Request dispatching. If a function fails, $lastError will be updated.
+  if (isset($_GET['action'])) {
+    $action = $_GET['action'];
+    if ($action == 'callback') {
+      if (handleCallback()) {
+        if (getTokenCredentials()) {
+          listNotebooks();
+        }
+      }
+    } else if ($action == 'authorize') {
+      if (getTemporaryCredentials()) {
+        // We obtained temporary credentials, now redirect the user to evernote.com to authorize access
+        header('Location: ' . getAuthorizationUrl());
+      }
+    } else if ($action == 'reset') {
+      resetSession();
     }
+  }
 ?>
 <!DOCTYPE HTML>
 <html lang="en">
@@ -428,6 +452,8 @@ console.log(input);
 <br />
 <br ?>
 <div id="footer">
+<a href="index.php?action=authorize">Click here to authorize</a>
+
 	<p>Designed and Constructed by Ben Leiken, Sean Harrington, Josh Fishbein, and Krzysztof Danielewicz</p>
 </div>
 
