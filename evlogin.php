@@ -16,8 +16,8 @@ function Save()
 {
     $username = trim($_SESSION['user1']);
     $password = trim($_SESSION['pass1']);
-    $consumerKey = "bleiken-4421";
-    $consumerSecret = "6a143060486eaca8";
+    $consumerKey = "userkrys";
+    $consumerSecret = "7cba94d6bd02056f";
 
     $evernoteHost = "sandbox.evernote.com";
     $evernotePort = "443";
