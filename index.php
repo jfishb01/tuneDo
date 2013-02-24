@@ -67,8 +67,19 @@
 
 
 <div class="app-form">
-        <? if (!(isset($_SESSION['isset'])) && !$_SESSION['isset']){ ?>
-	<a href=""> <img id="evlogo" src="img/evlogo.png" /></a>
+
+
+
+
+
+
+
+
+<?php if (isset($lastError)) { ?>
+    <p style="color:red">An error occurred: <?php echo $lastError;  ?></p>
+<?php } else if ($action != 'callback') { ?>
+
+	<a href="index.php?action=authorize"> <img id="evlogo" src="img/evlogo.png" /></a>
 </div>
 <? } else{ ?>
         <div id="login">
@@ -77,6 +88,8 @@
 
         </div>
 <? } ?>
+
+
 </div>
 
 
@@ -443,9 +456,8 @@ console.log(input);
 <br />
 <br ?>
 <div id="footer">
-<a href="index.php?action=authorize">Click here to authorize</a>
-
 	<p>Designed and Constructed by Ben Leiken, Sean Harrington, Josh Fishbein, and Krzysztof Danielewicz</p>
+	<a href="http://localhost/tuneDo/index.php?action=reset">Reset</a>
 </div>
 
 </body>
